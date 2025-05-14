@@ -2,17 +2,19 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>All people</title>
+    <title>Список пользователей</title>
 </head>
 <body>
+<h2>База пользователей</h2>
 <div th:each="person: ${people}">
     <a th:href="@{/people/{id}(id=${person.getId()})}"
-       th:text="${person.getName()+','+person.getAge()}">user</a>
+       th:text="${person.getName()+','+person.getYear()}">user</a>
 </div>
 <br/>
 <hr/>
-
-<a href="/people/new">Создать нового человека</a>
+<form th:method="GET" th:action="@{/people/new}">
+    <input type="submit" value="Добавить пользователя"/>
+</form>
 
 </body>
 </html>

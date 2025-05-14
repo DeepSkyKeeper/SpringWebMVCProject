@@ -2,27 +2,20 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>New person</title>
+    <title>Новый пользователь</title>
 </head>
+<h2><%= "Новый пользователь" %></h2>
 <body>
 <form th:method="POST" th:action="@{/people}" th:object="${person}">
-  <label for="name"> Enter name:</label>
+  <label for="name"> Имя пользователя:</label>
   <input type="text" th:field="*{name}" id="name"/>
   <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
     </br>
-    <label for="age"> Enter age:</label>
-    <input type="text" th:field="*{age}" id="age"/>
-  <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</div>
+    <label for="year"> Год рождения:</label>
+    <input type="text" th:field="*{year}" id="year"/>
+  <div style="color:red" th:if="${#fields.hasErrors('year')}" th:errors="*{year}">Year error</div>
   </br>
-    <label for="email"> Enter email:</label>
-    <input type="text" th:field="*{email}" id="email"/>
-  <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</div>
-  </br>
-  <label for="email"> Enter address:</label>
-  <input type="text" th:field="*{address}" id="address"/>
-  <div style="color:red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address error</div>
-  </br>
-    <input type="submit" value="Create!"/>
+    <input type="submit" value="Создать"/>
 </form>
 </body>
 </html>
