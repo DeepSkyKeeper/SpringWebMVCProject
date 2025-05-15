@@ -27,7 +27,7 @@ public class UserController {
         model.addAttribute("person", personDAO.show(id));
         return "redirect:/books/{id}";
     }
-    @PatchMapping("/del/{id}")
+    @PatchMapping("/user/del/{id}")
     public String delete(@PathVariable("id") int id){
         userDAO.update(id);
         return "redirect:/books/{id}";
@@ -35,6 +35,6 @@ public class UserController {
     @PatchMapping("/{id}/user/add")
     public String addUser(@ModelAttribute("person") Person person, @PathVariable("id") int id){
         bookDAO.update(id,person.getId());
-        return "redirect:/books{id}";
+        return "redirect:/books/{id}";
     }
 }

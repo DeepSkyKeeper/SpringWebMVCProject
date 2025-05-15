@@ -9,29 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/BookDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/util/BookValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
+    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="work140525">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/PersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello_world.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello_world.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,8 +249,17 @@
       <workItem from="1744928383525" duration="19388000" />
       <workItem from="1745531029081" duration="58000" />
       <workItem from="1745531103073" duration="29469000" />
-      <workItem from="1747150653916" duration="8639000" />
+      <workItem from="1747150653916" duration="10503000" />
     </task>
+    <task id="LOCAL-00001" summary="work140525">
+      <option name="closed" value="true" />
+      <created>1747239925525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747239925525</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +275,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="work140525" />
+    <option name="LAST_COMMIT_MESSAGE" value="work140525" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
