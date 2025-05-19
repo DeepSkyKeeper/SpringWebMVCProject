@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="work140525">
+    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="without show userdata in book show">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/adminPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +251,7 @@
       <workItem from="1744928383525" duration="19388000" />
       <workItem from="1745531029081" duration="58000" />
       <workItem from="1745531103073" duration="29469000" />
-      <workItem from="1747150653916" duration="10503000" />
+      <workItem from="1747150653916" duration="26232000" />
     </task>
     <task id="LOCAL-00001" summary="work140525">
       <option name="closed" value="true" />
@@ -259,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747239925525</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="without show userdata in book show">
+      <option name="closed" value="true" />
+      <created>1747284714025</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747284714025</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +288,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work140525" />
-    <option name="LAST_COMMIT_MESSAGE" value="work140525" />
+    <MESSAGE value="without show userdata in book show" />
+    <option name="LAST_COMMIT_MESSAGE" value="without show userdata in book show" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

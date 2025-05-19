@@ -22,9 +22,10 @@ public class UserController {
     }
 
 
-    @GetMapping("/user{id}")
-    public String show(@PathVariable("id") int id, Model model) {
-        model.addAttribute("person", personDAO.show(id));
+    @GetMapping("{id}/user")
+    public String show(@PathVariable("id") int id,Model model) {
+        model.addAttribute("person", userDAO.show(id));
+//        System.out.println( userDAO.show(id).getName());
         return "redirect:/books/{id}";
     }
     @PatchMapping("/user/del/{id}")
@@ -33,8 +34,12 @@ public class UserController {
         return "redirect:/books/{id}";
     }
     @PatchMapping("/{id}/user/add")
-    public String addUser(@ModelAttribute("person") Person person, @PathVariable("id") int id){
-        bookDAO.update(id,person.getId());
-        return "redirect:/books/{id}";
+    public String addUser(Model model,@ModelAttribute("person") Person person, @PathVariable("id") int id){
+//        System.out.println("id="+id+" person="+person+" book="+bookDAO.show(id).getUser_id()+"personId="+person.getId());
+//        System.out.println(person.getName());
+       bookDAO.update(id,person.getId());
+       model.addAttribute("person", personDAO.show(person.getId()));
+        System.out.println(personDAO.show(person.getId()).getName());
+        return "redirect:/books/{id}/user";
     }
 }

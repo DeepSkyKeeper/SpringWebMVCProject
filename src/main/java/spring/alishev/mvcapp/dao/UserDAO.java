@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import spring.alishev.mvcapp.models.Book;
 import spring.alishev.mvcapp.models.Person;
 
+import java.util.Optional;
+
 @Component
 public class UserDAO {
     private JdbcTemplate jdbcTemplate;
@@ -22,8 +24,9 @@ public class UserDAO {
     public void update(int id) {
         jdbcTemplate.update("UPDATE book SET user_id=null WHERE id=?", id);
     }
-    public void show(int id) {
-        jdbcTemplate.query("SELECT person.name FROM person where id=?", new Object[]{id},
+    public Person show(int id) {
+        System.out.println("Книга с id "+id);
+       return jdbcTemplate.query("SELECT * FROM person join book on person.id =book.user_id where book.id=?", new Object[]{id},
                 new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
     }
 }
