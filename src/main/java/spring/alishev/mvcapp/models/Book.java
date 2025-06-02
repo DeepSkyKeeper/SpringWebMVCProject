@@ -20,7 +20,7 @@ public class Book {
     @Max(value=2025,message = "Год издания не может быть позже текущего")
     private int year;
 
-    private Optional<Integer> user_id;
+    private Optional<Integer> user_id=Optional.empty();
 
     public Book(int id, String title, String author, int year, Optional<Integer> user_id) {
         this.id = id;

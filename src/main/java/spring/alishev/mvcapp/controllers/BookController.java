@@ -7,9 +7,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import spring.alishev.mvcapp.dao.BookDAO;
 import spring.alishev.mvcapp.dao.PersonDAO;
+import spring.alishev.mvcapp.dao.UserDAO;
 import spring.alishev.mvcapp.models.Book;
 import spring.alishev.mvcapp.models.Person;
 import spring.alishev.mvcapp.util.BookValidator;
+
+import java.util.Optional;
 
 
 @Controller
@@ -18,11 +21,13 @@ public class BookController {
     private final BookDAO bookDAO;
     private final BookValidator bookValidator;
     private final PersonDAO personDAO;
+    private final UserDAO userDAO;
 
-    public BookController(BookDAO bookDAO, BookValidator bookValidator, PersonDAO personDao) {
+    public BookController(BookDAO bookDAO, BookValidator bookValidator, PersonDAO personDao, UserDAO userDAO) {
         this.bookDAO = bookDAO;
         this.bookValidator = bookValidator;
         this.personDAO = personDao;
+        this.userDAO = userDAO;
     }
 
     @GetMapping()
@@ -38,9 +43,15 @@ public class BookController {
     }
 
     @GetMapping("/{id}")
-    public String show(@PathVariable("id") int id, Model model,@ModelAttribute("person") Person person) {
-        model.addAttribute("book", bookDAO.show(id));
-        model.addAttribute("people", personDAO.index());
+    public String show(@PathVariable("id") int id, Model model,@ModelAttribute ("person") Person person) {
+        Book book= bookDAO.show(id);
+       Optional<Integer> userId;
+        model.addAttribute("book",book);
+        userId=book.getUser_id();
+        if (userId.isPresent()){
+        model.addAttribute("person",userDAO.show(userId.get()));}
+        else model.addAttribute("people", personDAO.index());
+        System.out.println("отправка в шаблон books/show из bookcontroller");
         return "books/show";
     }
 
