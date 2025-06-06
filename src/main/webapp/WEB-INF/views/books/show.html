@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Страница книги</title>
 </head>
-<h2>Книга</h2>
+<h3>Карточка книги</h3>
 <body>
-<p th:text="${book.getTitle()}">VALUE</p>
-<p th:text="${book.getAuthor()}">VALUE</p>
-<p th:text="${book.getYear()}">VALUE</p>
+<h4 th:text="'Название: '+ ${book.getTitle()}">VALUE</h4>
+<h4 th:text="'Автор: '+ ${book.getAuthor()}">VALUE</h4>
+<h4 th:text="'Год издания: '+ ${book.getYear()}">VALUE</h4>
 <!--<p th:if="${book.getUser_id()!=null}" th:text="Книга выдана пользователю ${book.getUser_id()}">view</p>-->
 
 <form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">
@@ -21,7 +21,7 @@
 </p>
 <!--<a th:href="@{/book/{id}/edit(id=${book.getId()})}">Изменить</a>-->
 <div th:if="${book.getUser_id().isEmpty()}">
-    <h3 th:text="'Эта книга свободна'"></h3>
+    <h4 th:text="'Эта книга свободна'"></h4>
     <form th:method="PATCH" th:action="@{/books/{id}/user/add(id=${book.getId()})}">
         <label for="person">Кому выдать книгу?: </label>
         <select th:object="${person}" th:field="*{id}" id="person">
@@ -34,15 +34,14 @@
     </form>
 </div>
 <div th:unless="${book.getUser_id().isEmpty()}">
-    <form th:method="GET" th:action="@{/books/user/{id}(id=${book.getUser_id()})}">
-        <h3 th:text="${'Книга выдана пользователю ' +person.getName()}">VALUE</h3>
-    </form>
+        <h4 th:text="${'Книга выдана пользователю ' +person.getName()}">VALUE</h4>
 
     <form th:method="PATCH" th:action="@{/books/user/del/{id}(id=${book.getId()})}">
         <input type="submit" value="Возврат книги"/>
     </form>
 </div>
 <!--<p th:text="${book.getUser_id()}">VALUE</p>-->
-
+</p>
+<a th:href="@{/books}">Библиотека</a>
 </body>
 </html>

@@ -22,12 +22,11 @@ public class Book {
 
     private Optional<Integer> user_id=Optional.empty();
 
-    public Book(int id, String title, String author, int year, Optional<Integer> user_id) {
+    public Book(int id, String title, String author, int year) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.year = year;
-        this.user_id = user_id;
     }
     public Book(){}
 
@@ -68,7 +67,7 @@ public class Book {
     }
 
     public void setUser_id() {
-        user_id=null;
+        user_id= Optional.empty();
     }
 
     public void setUser_id(Optional<Integer> id) {

@@ -3,12 +3,15 @@ package spring.alishev.mvcapp.models;
 
 import jakarta.validation.constraints.*;
 
+import java.util.List;
+
 public class Person {
     private int id;
     @NotEmpty(message = "Имя не может быть пустым")
     @Size(min = 2, max = 30, message = "Имя должно быть длиной от 2 до 30 символов")
     private String name;
     @Min(value = 1900, message = "Укажите год не раньше 1900")
+    @Max(value = 2025, message = "Год рождения не может быть больше 2025")
     private int year;
 
     public Person(int id, String name, int year) {

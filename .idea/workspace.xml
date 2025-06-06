@@ -9,16 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="without show userdata in book show">
+    <list default="true" id="61c07773-fe99-42f3-bc78-7d88477cd528" name="Changes" comment="with show userdata in bookshow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/controllers/PeopleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +255,7 @@
       <workItem from="1745531029081" duration="58000" />
       <workItem from="1745531103073" duration="29469000" />
       <workItem from="1747150653916" duration="26862000" />
-      <workItem from="1747715334095" duration="40070000" />
+      <workItem from="1747715334095" duration="58569000" />
     </task>
     <task id="LOCAL-00001" summary="work140525">
       <option name="closed" value="true" />
@@ -282,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747689503768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="with show userdata in bookshow">
+      <option name="closed" value="true" />
+      <created>1748880586102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748880586102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +309,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work140525" />
     <MESSAGE value="without show userdata in book show" />
-    <option name="LAST_COMMIT_MESSAGE" value="without show userdata in book show" />
+    <MESSAGE value="with show userdata in bookshow" />
+    <option name="LAST_COMMIT_MESSAGE" value="with show userdata in bookshow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -320,11 +328,6 @@
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar!/org/springframework/web/servlet/support/AbstractDispatcherServletInitializer.class</url>
           <line>37</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/spring/alishev/mvcapp/models/Book.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

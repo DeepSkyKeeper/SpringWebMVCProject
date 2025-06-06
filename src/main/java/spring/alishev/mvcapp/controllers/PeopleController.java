@@ -33,6 +33,7 @@ public class PeopleController {
     public String show(@PathVariable("id") int id, Model model) {
         // получим одного человека из DAO и передадим на отображение в представление
         model.addAttribute("person", personDAO.show(id));
+        model.addAttribute("books",personDAO.getBooksByPersonId(id));
         return "people/show";
     }
 

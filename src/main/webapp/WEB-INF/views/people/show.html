@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <title>Пользователь</title>
 </head>
+<h3>Карточка пользователя</h3>
 <body>
-<p th:text="${person.getId()}">VALUE</p>
-<p th:text="${person.getName()+','+person.getYear()}">VALUE</p>
-
+</p>
+<h4 th:text="'id пользователя ' +${person.getId()}">VALUE</h4>
+<h4 th:text="'Имя: '+${person.getName()}">VALUE</h4>
+<h4 th:text="' Год рождения: '+${person.getYear()}">VALUE</h4>
+<div th:if="${books.isEmpty()}">
+    <h4 th:text="'Человек пока не взял ни одной книги'"></h4>
+</div>
+<div th:unless="${books.isEmpty}">
+   <h4 th:text="'Книги взятые пользователем:'"></h4>
+    <a th:each="book: ${books}">
+     <a  th:text="${book.getTitle()+','+book.getAuthor()+','+book.getYear()}">book</a>
+        </p>
+    </a>
+</div>
+</p>
 <!--<a th:href="@{/people/{id}/edit(id=${person.getId()})}">Изменить</a>-->
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
     <input type="submit" value="Изменить"/>
 </form>
-
+</p>
 <form th:method="DELETE" th:action="@{/people/del/{id}(id=${person.getId()})}">
     <input type="submit" value="Удалить"/>
 </form>
+</p>
+<a th:href="@{/people}">База пользователей</a>
 </body>
 </html>

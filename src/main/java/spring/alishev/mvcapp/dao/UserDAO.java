@@ -3,8 +3,8 @@ package spring.alishev.mvcapp.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Component;
-import spring.alishev.mvcapp.models.Book;
 import spring.alishev.mvcapp.models.Person;
 
 import java.util.Optional;
@@ -21,16 +21,14 @@ public class UserDAO {
     public void update(int id, int userId) {
         jdbcTemplate.update("UPDATE book SET user_id=? where id=?", userId, id);
     }
+
     public void update(int id) {
         jdbcTemplate.update("UPDATE book SET user_id=null WHERE id=?", id);
     }
-    public Person show(int id) {
-        System.out.println("Книга с id "+id);
 
-//       Person person=jdbcTemplate.query("SELECT * FROM person join book on person.id =book.user_id where book.id=?", new Object[]{id},
-//                new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
-        Person person=jdbcTemplate.query("SELECT * FROM person where id=?",new Object[]{id},
+    public Person show(int id) {
+
+        return jdbcTemplate.query("SELECT * FROM person left join book on person.id =book.user_id where book.id=?", new Object[]{id},
                 new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
-       return person;
     }
 }

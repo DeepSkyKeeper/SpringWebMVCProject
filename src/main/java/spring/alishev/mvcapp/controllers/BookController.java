@@ -49,7 +49,7 @@ public class BookController {
         model.addAttribute("book",book);
         userId=book.getUser_id();
         if (userId.isPresent()){
-        model.addAttribute("person",userDAO.show(userId.get()));}
+        model.addAttribute("person",personDAO.show(userId.get()));}
         else model.addAttribute("people", personDAO.index());
         System.out.println("отправка в шаблон books/show из bookcontroller");
         return "books/show";
